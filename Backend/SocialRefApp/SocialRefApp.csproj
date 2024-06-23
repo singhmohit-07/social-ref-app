@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ReleaseVersion>0.3</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <UserSecretsId>0509374e-a35f-40e3-a0f6-3d6a7094c47a</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>SocialAppRef</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.2" />
+    <PackageReference Include="MailKit" Version="2.4.0" />
+    <PackageReference Include="MimeKit" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Services\" />
+    <None Remove="Data\" />
+    <None Remove="Entities\" />
+    <None Remove="Enums\" />
+    <None Remove="Services\StudentService\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Student\" />
+    <None Remove="Repository\" />
+    <None Remove="Dtos\User\" />
+    <None Remove="Services\CurrentAffairsService\" />
+    <None Remove="Dtos\CurrentAffairs\" />
+    <None Remove="Services\VacancyService\" />
+    <None Remove="Dtos\Vacancy\" />
+    <None Remove="Repository\Auth\" />
+    <None Remove="Repository\Metadata\" />
+    <None Remove="Services\EmailService\" />
+    <None Remove="Settings\" />
+    <None Remove="Services\ContentService\" />
+    <None Remove="Dtos\Article\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations/" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Services\StudentService\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Student\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Dtos\User\" />
+    <Folder Include="Services\CurrentAffairService\" />
+    <Folder Include="Dtos\CurrentAffairs\" />
+    <Folder Include="Services\VacancyService\" />
+    <Folder Include="Dtos\Vacancy\" />
+    <Folder Include="Repository\Auth\" />
+    <Folder Include="Repository\Metadata\" />
+    <Folder Include="Services\EmailService\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Services\ContentService\" />
+    <Folder Include="Dtos\Article\" />
+  </ItemGroup>
+</Project>
